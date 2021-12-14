@@ -14,20 +14,20 @@ export default class ProductManager {
         [
             {
                 description: {
-                    name: "Pali",
+                    name: "Yellow Pail",
                     voteCount: 30,
-                    details: "a quick brown fox",
-                    by: "someone",
+                    details: "On demand sand castle construction",
+                    by: "/usr1.png",
                     backgroundColor:this._generateColor()
                 }
             },
 
             {
                 description: {
-                    name: "ab",
+                    name: "Supermajority: The fantasy Congress League",
                     voteCount: 50,
-                    details: "quic brown fox",
-                    by: "idk",
+                    details: "Earn points when your favourite politician passes legislation.",
+                    by: "/usr2.png",
                     backgroundColor:this._generateColor()
 
                 }
@@ -35,10 +35,21 @@ export default class ProductManager {
 
             {
                 description: {
-                    name: "some product",
+                    name: "Tinfoild: Tailored tinfoil hats",
                     voteCount: 20,
-                    details: "aaa brown fox",
-                    by: "hmmmm",
+                    details: "We already have your measurements and shipping address.",
+                    by: "/usr3.png",
+                    backgroundColor:this._generateColor()
+
+                }
+            },
+
+             {
+                description: {
+                    name: "Haught or Naught",
+                    voteCount: 40,
+                    details: "High minded or absent minded? You decide",
+                    by: "/usr4.png",
                     backgroundColor:this._generateColor()
 
                 }

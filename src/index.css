@@ -17,7 +17,7 @@ code {
   display: grid;
   width: 80%;
   margin: 0 auto;
-  grid-template-columns: repeat(8, 150px);
+  grid-template-columns: repeat(8, 170px);
   gap: 20px;
   padding: 10px;
   grid-auto-rows: minmax(150px, auto);
@@ -40,13 +40,22 @@ code {
 
 .vote_button {
   background-color: inherit;
-  font-size: 16;
   margin: 0;
   border: none;
+  padding: 0;
   color: blue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  font-size: large;
 }
 
 .product_list {
   list-style-type: none;
 }
 
+
+.by_image{
+  border-radius: 50%;
+  width: 25px;
+  padding-left: 5px;
+}

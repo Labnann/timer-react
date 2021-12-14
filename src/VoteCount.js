@@ -14,10 +14,13 @@ export function VoteCount(props) {
     <div style={{
       display: 'flex',
       alignContent: 'flex-start',
-      flexWrap: 'wrap'
+      flexWrap: 'wrap',
+      fontWeight:"bold",
+      fontSize:15
     }}>
+
       <div>
-        <button class="vote_button" onClick={upvote}>△</button>
+        <button class="vote_button" onClick={upvote}>▲</button>
       </div>
       <div>
         {product.voteCount}

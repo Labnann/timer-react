@@ -2,7 +2,8 @@
 
 export function ProductImage() {
   return (
-    <div> 
+    <div>
+      <img style={{maxWidth:"70%", paddingTop:"15%"}} src="/wall.png" alt=""></img> 
 
     </div>
 
