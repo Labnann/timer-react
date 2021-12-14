@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export function VoteCount(props) {
   
   const product = props.data.product.description;
@@ -20,7 +18,7 @@ export function VoteCount(props) {
     }}>
 
       <div>
-        <button class="vote_button" onClick={upvote}>▲</button>
+        <button className="vote_button" onClick={upvote}>▲</button>
       </div>
       <div>
         {product.voteCount}

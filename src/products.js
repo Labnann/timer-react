@@ -6,9 +6,6 @@ const productManager = new ProductManager();
 
 export default function Products() {
 
-
-
-    console.log(productManager)
     const [products, setProducts] = useState(productManager.getProducts());
 
     const compare = (product1, product2) => {
@@ -18,7 +15,6 @@ export default function Products() {
     }
 
     const onVote = (newVoteCount, index) => {
-        console.log("onVote", products, index);
         const newProducts = products.slice();
         newProducts[index].description.voteCount = newVoteCount;
         setProducts(newProducts);
@@ -32,7 +28,7 @@ export default function Products() {
                 padding: 30
             }}
         >
-            <ol class="product_list">
+            <ol className="product_list">
                 {
                     products.sort(compare).map((product, index) => {
                         product.description.index = index;

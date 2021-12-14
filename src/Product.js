@@ -1,6 +1,6 @@
 import { ProductImage } from "./ProductImage";
 import { ProductDescription } from "./ProductDescription";
-import { useState } from "react";
+
 
 export default function Product(props) {
 

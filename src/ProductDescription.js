@@ -3,7 +3,7 @@ import { VoteCount } from "./VoteCount";
 
 function PersonImage(props) {
     return (
-        <img class="by_image" src={props.by} alt=""></img>
+        <img className="by_image" src={props.by} alt=""></img>
     )
 }
 
