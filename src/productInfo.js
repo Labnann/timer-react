@@ -1,5 +1,15 @@
 export default class ProductManager {
 
+    _generateColor() {
+    const r = Math.round(Math.random() * 255);
+    const g = Math.round(Math.random() * 255);
+    const b = Math.round(Math.random() * 255);
+    const a = Math.random();
+
+    return `rgba(${r},${g},${b},${a})`;
+  }
+ 
+
     _products =
         [
             {
@@ -7,7 +17,8 @@ export default class ProductManager {
                     name: "Pali",
                     voteCount: 30,
                     details: "a quick brown fox",
-                    by: "someone"
+                    by: "someone",
+                    backgroundColor:this._generateColor()
                 }
             },
 
@@ -16,7 +27,9 @@ export default class ProductManager {
                     name: "ab",
                     voteCount: 50,
                     details: "quic brown fox",
-                    by: "idk"
+                    by: "idk",
+                    backgroundColor:this._generateColor()
+
                 }
             },
 
@@ -25,14 +38,16 @@ export default class ProductManager {
                     name: "some product",
                     voteCount: 20,
                     details: "aaa brown fox",
-                    by: "hmmmm"
+                    by: "hmmmm",
+                    backgroundColor:this._generateColor()
+
                 }
             }
         ]
 
  
 
-    getProducts = () => {
+        getProducts = () => {
 
         return this._products;
 

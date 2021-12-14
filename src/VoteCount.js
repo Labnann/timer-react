@@ -17,7 +17,7 @@ export function VoteCount(props) {
       flexWrap: 'wrap'
     }}>
       <div>
-        <button onClick={upvote}>△</button>
+        <button class="vote_button" onClick={upvote}>△</button>
       </div>
       <div>
         {product.voteCount}

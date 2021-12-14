@@ -4,10 +4,15 @@ import { VoteCount } from "./VoteCount";
 
 export function ProductDescription(props) {
 
+    
+
     return (
-        <div className="product_description colored" >
+        <div>
             <VoteCount data={props.data} />
-            <div>
+            <div style={{
+                color:"blue",
+                fontWeight:"bold"
+            }}>
                 {props.data.product.description.name}
             </div>
             <div>
