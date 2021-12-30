@@ -15,8 +15,8 @@ export default class TimerManager {
             {
                 description: {
                     name: "Timer 1",
-
-                    details: "On demand sand castle construction",
+                    miliseconds: 100000,
+                    details: "On demand sand castle construction"
 
 
                 }
@@ -25,8 +25,8 @@ export default class TimerManager {
             {
                 description: {
                     name: "Timer 2",
-
-                    details: "Earn points when your favourite politician passes legislation.",
+                    miliseconds: 100000,
+                    details: "Earn points when your favourite politician passes legislation."
 
 
 
@@ -36,21 +36,16 @@ export default class TimerManager {
             {
                 description: {
                     name: "Timer 3",
-
-                    details: "We already have your measurements and shipping address.",
-
-
-
+                    miliseconds: 100000,
+                    details: "We already have your measurements and shipping address."
                 }
             },
 
             {
                 description: {
                     name: "Timer 4",
-
-                    details: "High minded or absent minded? You decide",
-
-
+                    miliseconds: 100000,
+                    details: "High minded or absent minded? You decide"
                 }
             }
         ]
