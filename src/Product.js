@@ -1,5 +1,5 @@
 import { ProductImage } from "./ProductImage";
-import { ProductDescription } from "./ProductDescription";
+import { Timer } from "./ProductDescription";
 
 
 export default function Product(props) {
@@ -13,7 +13,7 @@ export default function Product(props) {
       <div className="timer_wrapper">
        
         <div className="timer">
-          <ProductDescription
+          <Timer
             data={props.info}
           />
         </div>

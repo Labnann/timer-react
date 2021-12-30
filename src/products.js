@@ -1,18 +1,14 @@
 import { useState } from "react";
 import Product from "./Product"
-import ProductManager from "./productInfo";
+import TimerManager from "./productInfo";
 
-const productManager = new ProductManager();
+const productManager = new TimerManager();
 
 export default function Products() {
 
-    const [products, setProducts] = useState(productManager.getProducts());
+    const [products, setProducts] = useState(productManager.getTimers());
 
-    const compare = (product1, product2) => {
-        if (product1.description.voteCount > product2.description.voteCount) return -1;
-        if (product1.description.voteCount < product2.description.voteCount) return 1;
-        return 0;
-    }
+  
 
     const onVote = (newVoteCount, index) => {
         const newProducts = products.slice();
@@ -30,7 +26,7 @@ export default function Products() {
         >
             <ol className="product_list">
                 {
-                    products.sort(compare).map((product, index) => {
+                    products.map((product, index) => {
                         product.description.index = index;
                         return (
                             <li key={index}><Product

@@ -9,7 +9,7 @@ function PersonImage(props) {
 
 
 
-export function ProductDescription(props) {
+export function Timer(props) {
 
 
 

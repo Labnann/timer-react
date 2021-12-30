@@ -1,66 +1,65 @@
-export default class ProductManager {
+export default class TimerManager {
 
     _generateColor() {
-    const r = Math.round(Math.random() * 255);
-    const g = Math.round(Math.random() * 255);
-    const b = Math.round(Math.random() * 255);
-    const a = Math.random();
+        const r = Math.round(Math.random() * 255);
+        const g = Math.round(Math.random() * 255);
+        const b = Math.round(Math.random() * 255);
+        const a = Math.random();
 
-    return `rgba(${r},${g},${b},${a})`;
-  }
- 
+        return `rgba(${r},${g},${b},${a})`;
+    }
 
-    _products =
+
+    _timers =
         [
             {
                 description: {
-                    name: "Yellow Pail",
-                    voteCount: 30,
+                    name: "Timer 1",
+
                     details: "On demand sand castle construction",
-                    by: "/usr1.png",
-                    backgroundColor:this._generateColor()
+
+
                 }
             },
 
             {
                 description: {
-                    name: "Supermajority: The fantasy Congress League",
-                    voteCount: 50,
+                    name: "Timer 2",
+
                     details: "Earn points when your favourite politician passes legislation.",
-                    by: "/usr2.png",
-                    backgroundColor:this._generateColor()
+
+
 
                 }
             },
 
             {
                 description: {
-                    name: "Tinfoild: Tailored tinfoil hats",
-                    voteCount: 20,
+                    name: "Timer 3",
+
                     details: "We already have your measurements and shipping address.",
-                    by: "/usr3.png",
-                    backgroundColor:this._generateColor()
+
+
 
                 }
             },
 
-             {
+            {
                 description: {
-                    name: "Haught or Naught",
-                    voteCount: 40,
+                    name: "Timer 4",
+
                     details: "High minded or absent minded? You decide",
-                    by: "/usr4.png",
-                    backgroundColor:this._generateColor()
+
 
                 }
             }
         ]
 
- 
 
-        getProducts = () => {
 
-        return this._products;
+    getTimers = () => {
+
+        return this._timers;
 
     }
 
