@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Product from "./Product"
+import TimerContainer from "./TimerContainer"
 import TimerManager from "./productInfo";
 
 const productManager = new TimerManager();
 
-export default function Products() {
+export default function Timers() {
 
     const [products, setProducts] = useState(productManager.getTimers());
 
@@ -29,7 +29,7 @@ export default function Products() {
                     products.map((product, index) => {
                         product.description.index = index;
                         return (
-                            <li key={index}><Product
+                            <li key={index}><TimerContainer
                                 info={
                                     {
                                         product,

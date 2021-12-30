@@ -1,8 +1,8 @@
 import { ProductImage } from "./ProductImage";
-import { Timer } from "./ProductDescription";
+import { Timer } from "./Timer";
 
 
-export default function Product(props) {
+export default function TimerContainer(props) {
 
 
   const backgroundColor = props.backgroundColor;

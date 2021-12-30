@@ -1,12 +1,12 @@
 import './App.css';
-import Products  from './products';
+import Timers  from './Timers';
 import { SiteHead } from './SiteHead';
 
 function App() {
   return (
     <div className="App">
       <SiteHead />
-      <Products />
+      <Timers />
     </div>
   );
 }
