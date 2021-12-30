@@ -10,11 +10,9 @@ export default function Product(props) {
 
   return (
     <>
-      <div className="product_wrapper">
-        <div style={{ backgroundColor }} className="product_image">
-          <ProductImage />
-        </div>
-        <div className="product_description">
+      <div className="timer_wrapper">
+       
+        <div className="timer">
           <ProductDescription
             data={props.info}
           />

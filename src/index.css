@@ -13,7 +13,7 @@ code {
 }
 
 
-.product_wrapper{
+.timer_wrapper{
   display: grid;
   width: 80%;
   margin: 0 auto;
@@ -29,12 +29,12 @@ code {
   grid-row: 1;
 }
 
-.product_description {
+.timer {
   grid-column: 2/8;
   grid-row: 1;
 }
 
-.product_description > div {
+.timer > div {
   text-align: left;
 }
 

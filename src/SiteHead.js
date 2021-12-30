@@ -2,7 +2,7 @@ export function SiteHead() {
   return (
     <>
       <h2>
-        Popular Products
+       Timer
       </h2>
       <hr></hr>
     </>
