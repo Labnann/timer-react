@@ -2,19 +2,22 @@ import { useState } from "react";
 import TimerContainer from "./TimerContainer"
 import TimerManager from "./TimerInfo";
 
-const productManager = new TimerManager();
+const timeManager = new TimerManager();
 
 export default function Timers() {
 
-    const [timers, setProducts] = useState(productManager.getTimers());
+    const [timers, setTimes] = useState(timeManager.getTimers());
+    let next = timers.size;
 
   
 
-    const onVote = (newVoteCount, index) => {
+    const onTick = (newTime, index, intervalId) => {
         const newTimers = timers.slice();
-        newTimers[index].voteCount = newVoteCount;
-        setProducts(newTimers);
-
+        console.log(newTimers, index)
+        newTimers[index].miliseconds = newTime;
+        newTimers[index].intervalId = intervalId;
+        
+        setTimes(newTimers);
     }
 
 
@@ -33,7 +36,7 @@ export default function Timers() {
                                 info={
                                     {
                                         timer,
-                                        onVote
+                                        onTick
                                     }
                                 }
                                
@@ -42,6 +45,12 @@ export default function Timers() {
                     })
                 }
             </ol>
+
+            
         </div>
     );
 }
+
+
+
+
