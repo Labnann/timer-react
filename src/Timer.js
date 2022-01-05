@@ -11,6 +11,17 @@ function PersonImage(props) {
 
 export function Timer(props) {
 
+    function formatTime(miliseconds){
+        const date = new Date(miliseconds);
+        return {
+            hour: date.getUTCHours(),
+            minute: date.getUTCMinutes(),
+            second: date.getUTCSeconds()
+        }
+    }
+
+    const formattedTime = formatTime (props.data.timer.miliseconds);
+
 
 
     return (
@@ -20,10 +31,10 @@ export function Timer(props) {
                 color: "blue",
                 fontWeight: "bold"
             }}>
-                {props.data.product.description.name}
+                {props.data.timer.name}
             </div>
             <div style={{ paddingTop: "30px" }}>
-                {props.data.product.description.details}
+                {formattedTime.hour} : {formattedTime.minute} : {formattedTime.second}
             </div>
 
         </div>

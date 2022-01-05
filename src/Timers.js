@@ -1,19 +1,19 @@
 import { useState } from "react";
 import TimerContainer from "./TimerContainer"
-import TimerManager from "./productInfo";
+import TimerManager from "./TimerInfo";
 
 const productManager = new TimerManager();
 
 export default function Timers() {
 
-    const [products, setProducts] = useState(productManager.getTimers());
+    const [timers, setProducts] = useState(productManager.getTimers());
 
   
 
     const onVote = (newVoteCount, index) => {
-        const newProducts = products.slice();
-        newProducts[index].description.voteCount = newVoteCount;
-        setProducts(newProducts);
+        const newTimers = timers.slice();
+        newTimers[index].voteCount = newVoteCount;
+        setProducts(newTimers);
 
     }
 
@@ -26,17 +26,17 @@ export default function Timers() {
         >
             <ol className="product_list">
                 {
-                    products.map((product, index) => {
-                        product.description.index = index;
+                    timers.map((timer, index) => {
+                        timer.index = index;
                         return (
                             <li key={index}><TimerContainer
                                 info={
                                     {
-                                        product,
+                                        timer,
                                         onVote
                                     }
                                 }
-                                backgroundColor={product.description.backgroundColor}
+                               
                             /></li>
                         )
                     })
