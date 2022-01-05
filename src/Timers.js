@@ -39,15 +39,31 @@ export default function Timers() {
         </div>
     }
 
-    
 
 
 
-    const onTick = (newTime, index, intervalId) => {
-        const newTimers = timers.slice();
-        console.log(newTimers, index)
-        newTimers[index].miliseconds = newTime;
-        newTimers[index].intervalId = intervalId;
+
+    const onTick = (timer) => {
+        let newTimers = timers.slice();
+        const index = timer.index;
+
+        if(timer.remove){
+            newTimers = newTimers.splice(index);
+        }
+
+
+        newTimers[index].intervalId = timer.intervalId;
+
+        console.log(timer)
+
+        
+        if (timer.miliseconds)
+            newTimers[index].miliseconds = timer.miliseconds;
+
+        
+
+        if (timer.name)
+            newTimers[index].name = timer.name;
 
         setTimes(newTimers);
     }
